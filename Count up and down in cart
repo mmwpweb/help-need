@@ -1,0 +1,45 @@
+(function($) {
+    var $countUp= 0;
+    var $countDown = 0;
+
+    $(document.body).on( 'get_cart_total', function (){
+
+
+
+            $(document).on("click", '.plus-icon', function () {
+                $countUp += 1;
+                $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countUp).trigger('change')
+
+                setTimeout($('.mobile-update-qty').click(), 1000)
+            });
+
+            $(document).on("click", '.minus-icon', function () {
+                $countDown -= 1;
+                $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countDown).trigger('change')
+
+                setTimeout($('.mobile-update-qty').click(), 1000)
+            });
+        });
+
+
+    $(document).ready(function (){
+
+
+            $(document).on("click", '.plus-icon', function () {
+                $countUp += 1;
+                $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countUp).trigger('change')
+
+                setTimeout($('.mobile-update-qty').click(), 1000)
+            });
+
+
+
+
+            $(document).on("click", '.minus-icon', function () {
+                $countDown -= 1;
+                $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countDown).trigger('change')
+
+                setTimeout($('.mobile-update-qty').click(), 1000)
+            });
+        });
+})(jQuery);
