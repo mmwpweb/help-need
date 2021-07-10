@@ -1,45 +1,72 @@
 (function($) {
-    var $countUp= 0;
-    var $countDown = 0;
+    var $countUp= 1;
+    var $countDown = 1;
 
     $(document.body).on( 'get_cart_total', function (){
 
 
+        $('td.mobil-quantity').on("click", '.plus-icon', function () {
+            /*
+            var $countLength = 0
+            $('.qty').each(function () {
+                $countLength += 1;
+            })
 
-            $(document).on("click", '.plus-icon', function () {
-                $countUp += 1;
-                $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countUp).trigger('change')
+            for(let i = 0; i < $countLength; i++) {
+                var $countVariableUp = "variable"+i;
 
-                setTimeout($('.mobile-update-qty').click(), 1000)
-            });
+                $countVariableUp += 1;
 
-            $(document).on("click", '.minus-icon', function () {
-                $countDown -= 1;
-                $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countDown).trigger('change')
 
-                setTimeout($('.mobile-update-qty').click(), 1000)
-            });
+            */
+            $countUp += 1;
+            $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countUp).trigger('change')
+
+            setTimeout($('.mobile-update-qty').click(), 1000)
+
         });
+
+
+        $('td.mobil-quantity').on("click", '.minus-icon', function () {
+            $countDown -= 1;
+            $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countDown).trigger('change')
+
+            setTimeout($('.mobile-update-qty').click(), 1000)
+        });
+    });
 
 
     $(document).ready(function (){
 
 
-            $(document).on("click", '.plus-icon', function () {
-                $countUp += 1;
-                $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countUp).trigger('change')
-
-                setTimeout($('.mobile-update-qty').click(), 1000)
-            });
-
+        $(document).on("click", '.plus-icon', function () {
+            /* var $countLength = 0
+            $('.qty').each(function () {
+                $countLength += 1;
+            })
 
 
+            for(let i = 0; i < $countLength; i++) {
+                var dynamicNameVar = "variable";
+                var obj = {};
+                obj[dynamicNameVar + i] = countUP;
+            }
+            countUP += 1 */
+            $countUp += 1;
+            $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countUp).trigger('change')
 
-            $(document).on("click", '.minus-icon', function () {
-                $countDown -= 1;
-                $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countDown).trigger('change')
+            setTimeout($('.mobile-update-qty').click(), 1000)
 
-                setTimeout($('.mobile-update-qty').click(), 1000)
-            });
         });
+
+
+
+
+        $(document).on("click", '.minus-icon', function () {
+            $countDown -= 1;
+            $(this).closest("td.mobil-quantity").find(".qty").attr('value', $countDown).trigger('change')
+
+            setTimeout($('.mobile-update-qty').click(), 1000)
+        });
+    });
 })(jQuery);
