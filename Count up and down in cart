@@ -70,3 +70,19 @@
         });
     });
 })(jQuery);
+
+HTML
+<table>
+       <tbody><tr>
+                  <td class="product-quantity mobil-quantity" data-title="Antal">
+                         <div>
+                                <span class="plus-icon"><i class="fas fa-plus-circle"></i></span>
+                                <span class="minus-icon"><i class="fas fa-minus-circle"></i></span>
+                                	<div class="quantity">
+				                <label class="screen-reader-text" for="********">Rosemunde silke blondetop, denimblue - 164, XS+, 34 antal</label>
+		                        <input type="number" id="********" class="input-text qty text variable10" step="1" min="0" max="2" name="cart[************][qty]" value="3" title="Stk." size="4" placeholder="" inputmode="numeric">
+			            </div>
+                      </div></td>
+                </tr>
+       </tbody>
+</table>
